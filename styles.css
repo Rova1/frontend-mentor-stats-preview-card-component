@@ -1,0 +1,149 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* Variables */
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --white-main: hsl(0, 0%, 100%);
+  --white-trans: hsla(0, 0%, 100%, 0.75);
+  --white-trans2: hsla(0, 0%, 100%, 0.6);
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: Inter;
+  font-size: 15px;
+}
+
+/* Layout */
+
+body {
+  background-color: var(--main-bg);
+}
+
+.card {
+  background-color: var(--card-bg);
+  margin: 50px auto;
+  border-radius: 7px;
+  width: 90%;
+  max-width: 1150px;
+}
+
+aside {
+  position: relative;
+}
+
+aside img {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: block;
+  width: 100%;
+}
+
+aside .overlay {
+  background-color: rgba(131, 37, 155, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  z-index: 2;
+}
+
+main {
+  padding: 45px;
+  text-align: center;
+}
+
+main h1 {
+  color: var(--white-main);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+main em {
+  color: rgb(131, 37, 155);
+  font-style: normal;
+}
+
+main p {
+  color: var(--white-trans);
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.stats .stat {
+  margin: 15px;
+}
+.stats .value {
+  color: var(--white-main);
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.stats .object {
+  color: var(--white-trans2);
+  text-transform: uppercase;
+  font-family: "Lexend Deca";
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  aside {
+    order: 2;
+    width: 50%;
+  }
+
+  aside img {
+    border-radius: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+
+  aside .overlay {
+    border-radius: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+
+  main {
+    order: 1;
+    width: 50%;
+    text-align: left;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .stats {
+    flex-direction: row;
+  }
+}

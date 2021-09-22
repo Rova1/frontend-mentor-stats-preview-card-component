@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="card">
+    <aside>
+      <picture>
+        <source media="(min-width: 1000px)" srcset="images/image-header-desktop.jpg">
+        <img src="images/image-header-mobile.jpg" alt="People working in office">
+      </picture>
+      <div class="overlay"></div>
+    </aside>
+    <main>
+      <div>
+        <h1>Get <em>insights</em> that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="value">10k+</div>
+          <div class="object">companies</div>
+        </div>
+        <div class="stat">
+          <div class="value">314</div>
+          <div class="object">templates</div>
+        </div>
+        <div class="stat">
+          <div class="value">12m+</div>
+          <div class="object">queries</div>
+        </div>
+      </div>
+    </main>
   </div>
 </body>
+
 </html>
